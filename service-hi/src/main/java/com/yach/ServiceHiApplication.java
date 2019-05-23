@@ -13,7 +13,7 @@ import org.springframework.web.bind.annotation.RestController;
  * 向注册中心注册时会发送心跳信息
  */
 @SpringBootApplication
-@EnableEurekaClient
+@EnableEurekaClient //服务中心注册，服务提供
 @RestController
 public class ServiceHiApplication {
 
