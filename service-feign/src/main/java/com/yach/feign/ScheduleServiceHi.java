@@ -1,5 +1,6 @@
 package com.yach.feign;
 
+import com.yach.hystric.ScheduleServiceHiHystric;
 import org.springframework.cloud.netflix.feign.FeignClient;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -10,7 +11,7 @@ import org.springframework.web.bind.annotation.RequestParam;
  * Created by Yach on 2019/5/23.
  * version v4.0.
  */
-@FeignClient(value = "service-hi")
+@FeignClient(value = "service-hi",fallback = ScheduleServiceHiHystric.class)
 public interface ScheduleServiceHi {
     @GetMapping(value = "/hi")
     String sayHiByFeign(@RequestParam("name") String name);
