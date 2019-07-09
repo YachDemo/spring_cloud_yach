@@ -9,26 +9,19 @@ import org.springframework.cloud.netflix.hystrix.EnableHystrix;
 import org.springframework.context.annotation.Bean;
 import org.springframework.web.client.RestTemplate;
 
-/**
- * 服务消费者
- */
 @SpringBootApplication
 @EnableEurekaClient
 @EnableDiscoveryClient
-@EnableHystrix //断路器（ribbon）
+@EnableHystrix                //断路器
 public class ServiceRibbonApplication {
 
     public static void main(String[] args) {
         SpringApplication.run(ServiceRibbonApplication.class, args);
-        System.out.println("=======================ServiceRibbonApplication start ==============");
+        System.out.println("===============================ServiceRibbonApplication Start======================");
     }
 
-    /**
-     * 创建一个bean
-     * @return
-     */
     @Bean
-    @LoadBalanced //开启负载均衡
+    @LoadBalanced
     RestTemplate restTemplate(){
         return new RestTemplate();
     }

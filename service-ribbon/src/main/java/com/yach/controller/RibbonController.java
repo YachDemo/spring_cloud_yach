@@ -7,16 +7,18 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 /**
- * Created by Yach on 2019/5/23.
- * version v4.0.
+ * Created by Yach on 2019/7/9
+ *
+ * @version v4.0
  */
 @RestController
-public class HelloController {
+public class RibbonController {
     @Autowired
-    private HelloService helloService;
+    HelloService helloService;
 
-    @RequestMapping("/ribbonHi")
-    public String hi(@RequestParam(value = "name",defaultValue = "yach") String name){
+    @RequestMapping("/hi")
+    public String hi(@RequestParam String name){
         return helloService.hiService(name);
     }
+
 }

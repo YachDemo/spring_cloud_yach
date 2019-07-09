@@ -7,6 +7,3 @@ server:
 spring:
   application:
     name: service-ribbon
-ribbon:
-  read-time-out: 3000
-  connect-time-out: 3000
