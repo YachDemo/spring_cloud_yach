@@ -1,20 +1,23 @@
 package com.yach;
 
+import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.boot.autoconfigure.web.ErrorMvcAutoConfiguration;
+import org.springframework.boot.web.servlet.ServletComponentScan;
 import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.RestController;
 
 /**
  * 服务提供者
  * 向注册中心注册时会发送心跳信息
  */
-@SpringBootApplication
+@SpringBootApplication(scanBasePackages = "com.yach",exclude = ErrorMvcAutoConfiguration.class)
 @EnableEurekaClient //服务中心注册，服务提供
-@RestController
+@MapperScan(basePackages = "com.yach.mapper")
+@ServletComponentScan
 public class ServiceHiApplication {
 
     public static void main(String[] args) {

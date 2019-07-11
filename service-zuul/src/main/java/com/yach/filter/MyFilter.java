@@ -2,10 +2,10 @@ package com.yach.filter;
 
 import com.netflix.zuul.ZuulFilter;
 import com.netflix.zuul.context.RequestContext;
+import org.apache.log4j.Logger;
 import org.springframework.stereotype.Component;
 
 import javax.servlet.http.HttpServletRequest;
-import java.io.IOException;
 
 /**
  * Zuul过滤器（网关过滤器）
@@ -49,20 +49,20 @@ public class MyFilter extends ZuulFilter {
     public Object run() {
         RequestContext ctx = RequestContext.getCurrentContext();
         HttpServletRequest request = ctx.getRequest();
-        System.out.println(String.format("%s >>> %s",request.getMethod(),request.getRequestURL().toString()));
-        Object token  = request.getParameter("token");
-        if (token == null){
-            System.err.println("token is empty");
-            ctx.setSendZuulResponse(false);
-            ctx.setResponseStatusCode(401);
-
-            try {
-                ctx.getResponse().getWriter().write("token is empty");
-            } catch (Exception e) {
-                e.printStackTrace();
-            }
-        }
-        System.out.println("ok");
+        System.out.println(String.format("%s >>> %s >>> %s",request.getRequestURI(),request.getMethod(),request.getRequestURL().toString()));
+//        Object token  = request.getParameter("token");
+//        if (token == null){
+//            System.err.println("token is empty");
+//            ctx.setSendZuulResponse(false);
+//            ctx.setResponseStatusCode(401);
+//
+//            try {
+//                ctx.getResponse().getWriter().write("token is empty");
+//            } catch (Exception e) {
+//                e.printStackTrace();
+//            }
+//        }
+//        System.out.println("ok");
         return null;
     }
 }
