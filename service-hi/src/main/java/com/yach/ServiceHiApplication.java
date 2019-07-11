@@ -16,7 +16,7 @@ import org.springframework.web.bind.annotation.RequestParam;
  */
 @SpringBootApplication(scanBasePackages = "com.yach",exclude = ErrorMvcAutoConfiguration.class)
 @EnableEurekaClient //服务中心注册，服务提供
-@MapperScan(basePackages = "com.yach.mapper")
+@MapperScan(basePackages = "com.yach.dao")
 @ServletComponentScan
 public class ServiceHiApplication {
 
