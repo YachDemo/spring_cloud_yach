@@ -14,7 +14,7 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 @RefreshScope
 public class ConfigClientController {
-    @Value("${democonfigclient.message}")
+    @Value("${foo}")
     String foo;
 
     @GetMapping("/hi")
