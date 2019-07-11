@@ -1,1 +1,2 @@
 SpringCloud基本框架结构<Finchley>
+项目大致版本搭建完成，后续考虑增加
