@@ -24,12 +24,4 @@ public class ServiceHiApplication {
         SpringApplication.run(ServiceHiApplication.class, args);
         System.out.println("=========================ServiceHiApplication start==============");
     }
-
-    @Value("${server.port}")
-    String port;
-
-    @RequestMapping("/hi")
-    public String service_hi(@RequestParam(value = "name",defaultValue = "yach") String name){
-        return "hi,"+name+" i am port:"+port;
-    }
 }

@@ -6,14 +6,12 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="service-zuul" />
-        <module name="service-provide" />
+        <module name="eureka-server" />
         <module name="config-server" />
         <module name="service-feign" />
-        <module name="eureka-server" />
+        <module name="service-zuul" />
         <module name="service-hi" />
         <module name="service-ribbon" />
-        <module name="service-miya" />
         <module name="config-client" />
         <module name="service-redis" />
       </profile>
@@ -24,8 +22,6 @@
       <module name="eureka-server" target="1.8" />
       <module name="service-feign" target="1.8" />
       <module name="service-hi" target="1.8" />
-      <module name="service-miya" target="1.8" />
-      <module name="service-provide" target="1.8" />
       <module name="service-redis" target="1.8" />
       <module name="service-ribbon" target="1.8" />
       <module name="service-zuul" target="1.8" />
@@ -34,16 +30,7 @@
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
-      <module name="config-client" options="" />
-      <module name="config-server" options="" />
-      <module name="eureka-server" options="" />
-      <module name="service-feign" options="" />
-      <module name="service-hi" options="" />
-      <module name="service-miya" options="" />
-      <module name="service-provide" options="" />
       <module name="service-redis" options="-parameters" />
-      <module name="service-ribbon" options="" />
-      <module name="service-zuul" options="" />
     </option>
   </component>
 </project>

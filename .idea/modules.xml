@@ -7,12 +7,10 @@
       <module fileurl="file://$PROJECT_DIR$/eureka-server/eureka-server.iml" filepath="$PROJECT_DIR$/eureka-server/eureka-server.iml" />
       <module fileurl="file://$PROJECT_DIR$/service-feign/service-feign.iml" filepath="$PROJECT_DIR$/service-feign/service-feign.iml" />
       <module fileurl="file://$PROJECT_DIR$/service-hi/service-hi.iml" filepath="$PROJECT_DIR$/service-hi/service-hi.iml" />
-      <module fileurl="file://$PROJECT_DIR$/service-miya/service-miya.iml" filepath="$PROJECT_DIR$/service-miya/service-miya.iml" />
-      <module fileurl="file://$PROJECT_DIR$/service-provide/service-provide.iml" filepath="$PROJECT_DIR$/service-provide/service-provide.iml" />
       <module fileurl="file://$PROJECT_DIR$/service-redis/service-redis.iml" filepath="$PROJECT_DIR$/service-redis/service-redis.iml" />
       <module fileurl="file://$PROJECT_DIR$/service-ribbon/service-ribbon.iml" filepath="$PROJECT_DIR$/service-ribbon/service-ribbon.iml" />
       <module fileurl="file://$PROJECT_DIR$/service-zuul/service-zuul.iml" filepath="$PROJECT_DIR$/service-zuul/service-zuul.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/spring_cloud_yach.iml" filepath="$PROJECT_DIR$/.idea/spring_cloud_yach.iml" />
+      <module fileurl="file://$PROJECT_DIR$/spring_cloud_yach.iml" filepath="$PROJECT_DIR$/spring_cloud_yach.iml" />
     </modules>
   </component>
 </project>

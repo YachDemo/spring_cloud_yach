@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Yach</title>
+</head>
+<body>
+
+</body>
+</html>
+<script type="text/javascript" src="././dist/lib/js/jquery.min.js"></script>
+<!-- 页面初始时加载一个页面 -->
+<script type="text/javascript">
+	$(document).ready(function(){
+		$.ajax({
+					type: "POST",
+					url: "http://localhost:8762/yach/jump",
+					async: true,
+					success: function(data) {
+						if (data) {
+							window.location.href='./login/login.html';
+						}
+					},
+					error: function() {
+						
+					}
+				})
+	})
+</script>
