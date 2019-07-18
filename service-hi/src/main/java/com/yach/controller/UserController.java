@@ -26,7 +26,10 @@ public class UserController {
     @PostMapping("registered")
     public RtnResult registered(@RequestParam("userName") String userName,
                                 @RequestParam("password") String password){
-        return null;
+        if (userName.isEmpty() || password.isEmpty()){
+            return new RtnResult(WebUtils.ERROR_RESULT,WebUtils.ERROR_CODE,"缺少参数！");
+        }
+        return userService.registered(userName,password);
     }
 
     /**

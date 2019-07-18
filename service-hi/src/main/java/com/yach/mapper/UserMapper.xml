@@ -7,4 +7,10 @@
 <!--    <sql id="base_sql">-->
 
 <!--	</sql>-->
+    <insert id="addUser" parameterType="com.yach.pojo.User">
+        insert into y_user_info
+        (id, user_name, password, token, create_time, update_time, is_delete)
+        values
+        (#{id},#{userName} ,#{password},#{token} ,#{createTime} ,#{updateTime} ,#{isDelete} )
+    </insert>
 </mapper>

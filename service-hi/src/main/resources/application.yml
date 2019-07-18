@@ -24,4 +24,4 @@ spring:
 
 #mybatis集成
 mybatis:
-  mapper-locations: classpath:mapper/*Mapper.xml
+  mapper-locations: classpath*:com/yach/mapper/*.xml

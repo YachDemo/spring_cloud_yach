@@ -12,13 +12,16 @@ var userInfo = new Vue({
 						async: true,
 						success: function(data) {
 							if (data) {
-								//取出用户名，保存cookie
+								//取出用户名，保存cookie，
 							}
 						},
 						error: function() {
 							
 						}
 					})
+		},
+		toRegister:function () {
+			window.location.href = '../register/register.html'
 		}
 	},
 })
